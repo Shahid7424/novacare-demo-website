@@ -1,31 +1,58 @@
 @import "tailwindcss";
 
+@theme {
+  --color-forest: #0B3D2E;
+  --color-forest-deep: #072A20;
+  --color-forest-soft: #11543F;
+
+  --color-spring: #34D399;
+  --color-spring-bright: #4ADE80;
+
+  --color-cream: #F7F6F1;
+  --color-ink: #0E1A15;
+  --color-mute: #5B6B63;
+  --color-line: #E4E2D8;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --radius-4xl: 2rem;
+
+  --shadow-soft: 0 4px 24px -8px rgba(11,61,46,0.12);
+  --shadow-lift: 0 24px 60px -24px rgba(11,61,46,0.25);
+
+  --animate-marquee: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 :root {
   --font-inter: "Inter", system-ui, sans-serif;
   --font-fraunces: "Fraunces", Georgia, serif;
 }
- 
+
 * {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
- 
+
 html {
   scroll-behavior: smooth;
 }
- 
+
 body {
-  background-color: "bg-cream grain";
+  background-color: #F7F6F1;
   color: #0E1A15;
 }
- 
+
 ::selection {
   background: #34D399;
   color: #072A20;
 }
- 
-/* Thin custom scrollbar */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -37,19 +64,18 @@ body {
   border-radius: 999px;
   border: 3px solid #F7F6F1;
 }
- 
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 }
- 
+
 .grain {
   background-image: radial-gradient(rgba(11, 61, 46, 0.04) 1px, transparent 1px);
   background-size: 4px 4px;
 }
- 
+
 .text-balance {
   text-wrap: balance;
 }
- 
